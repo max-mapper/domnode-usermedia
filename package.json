@@ -1,4 +1,20 @@
 {
-  "name": "mediastream"
-, "version": "0.0.3"
+  "name": "mediastream",
+  "version": "0.0.3",
+  "_npmUser": {
+    "name": "maxogden",
+    "email": "max@maxogden.com"
+  },
+  "_id": "mediastream@0.0.3",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "_engineSupported": true,
+  "_npmVersion": "1.1.21",
+  "_nodeVersion": "v0.6.18",
+  "_defaultsLoaded": true,
+  "_from": "mediastream"
 }
