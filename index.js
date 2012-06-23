@@ -21,6 +21,12 @@ function MediaStream(options) {
 
 util.inherits(MediaStream, stream.Stream)
 
+module.exports = function(options) {
+  return new MediaStream(options)
+}
+
+module.exports.MediaStream = MediaStream
+
 MediaStream.prototype.getGetUserMedia = function() {
   if (navigator.getUserMedia) return navigator.getUserMedia
   if (navigator.webkitGetUserMedia) return navigator.webkitGetUserMedia
@@ -42,7 +48,7 @@ MediaStream.prototype.captureVideo = function() {
   canvas.width = this.video.videoWidth;
   canvas.height = this.video.videoHeight;
   canvas.getContext('2d').drawImage(this.video, 0, 0)
-  this.emit('data', canvas.toDataURL('image/webp'))
+  this.emit('data', canvas.toDataURL('image/png'))
 }
 
 MediaStream.prototype.createHiddenVideo = function() {
